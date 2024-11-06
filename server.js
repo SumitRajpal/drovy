@@ -8,13 +8,6 @@ const io = new Server(server);
 
 const PORT = 3000;
 
-// Serve static files if needed, e.g., HTML front-end
-app.use(express.static('public'));
-
-// Set up a simple route
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-});
 
 // Socket.io connection
 io.on('connection', (socket) => {
